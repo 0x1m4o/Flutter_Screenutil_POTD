@@ -22,40 +22,44 @@ class _ProfilePageState extends State<ProfilePage> {
             padding: const EdgeInsets.all(8),
             child: Column(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    InkWell(
-                      onTap: () {},
-                      child: Row(
+                Container(
+                  margin: EdgeInsets.only(left: 3.w),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      InkWell(
+                        onTap: () {},
+                        child: Row(
+                          children: [
+                            Text(
+                              'namakuchandra',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 18.sp),
+                            ),
+                            IconButton(
+                              icon: const Icon(
+                                  Icons.keyboard_arrow_down_outlined),
+                              onPressed: () {},
+                            )
+                          ],
+                        ),
+                      ),
+                      Row(
                         children: [
-                          Text(
-                            'namakuchandra',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 18.sp),
+                          IconButton(
+                            icon: const Icon(Icons.add_box_outlined),
+                            onPressed: () {},
                           ),
                           IconButton(
-                            icon:
-                                const Icon(Icons.keyboard_arrow_down_outlined),
+                            icon: const Icon(Icons.format_list_bulleted),
                             onPressed: () {},
                           )
                         ],
                       ),
-                    ),
-                    Row(
-                      children: [
-                        IconButton(
-                          icon: const Icon(Icons.add_box_outlined),
-                          onPressed: () {},
-                        ),
-                        IconButton(
-                          icon: const Icon(Icons.format_list_bulleted),
-                          onPressed: () {},
-                        )
-                      ],
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
+                SizedBox(height: 5.h),
                 Row(
                   children: [
                     Stack(
@@ -137,19 +141,20 @@ class _ProfilePageState extends State<ProfilePage> {
                       Expanded(
                           flex: 4,
                           child: Padding(
-                            padding: const EdgeInsets.all(3),
+                            padding: EdgeInsets.symmetric(horizontal: 3.w),
                             child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                     backgroundColor: Colors.grey[200]),
                                 onPressed: () {},
-                                child: const Text(
-                                    style: TextStyle(color: Colors.black),
+                                child: Text(
+                                    style: TextStyle(
+                                        color: Colors.black, fontSize: 14.sp),
                                     'Edit Profil')),
                           )),
                       Expanded(
                         flex: 5,
                         child: Padding(
-                          padding: const EdgeInsets.all(3),
+                          padding: EdgeInsets.symmetric(horizontal: 3.w),
                           child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.grey[200]),
@@ -164,7 +169,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       Expanded(
                         flex: 2,
                         child: Padding(
-                          padding: const EdgeInsets.all(3),
+                          padding: EdgeInsets.symmetric(horizontal: 3.w),
                           child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.grey[200]),
@@ -276,7 +281,7 @@ class StoryProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(right: 19.w),
+      padding: EdgeInsets.only(right: 5.w),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
